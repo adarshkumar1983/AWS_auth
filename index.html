@@ -1,0 +1,154 @@
+<!-- 
+  @Author: Your name
+  @Date:   2023-08-28 13:34:19
+  @Last Modified by:   Your name
+  @Last Modified time: 2023-08-28 16:51:46
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Item</title>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="path/to/your/css/styles.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-wyNrmcf5ewAJ8uLOqjnqW09i9G6YAS3Gf/bMnAhifXk7OsPbFfegT5Bccvwnhkd0y3lPQYY/Th+L26F6pMOh9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-D2bVyUG5Jt9s1gK5F5SdViwNGC//Jq3xTXJqEqwvz5AWeUjfXeOcKY04xjWJ3efS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xyz" crossorigin="anonymous" />
+</head>
+
+    <!-- Add Bootstrap CSS for modal styling -->
+    <link rel="stylesheet" href="/path/to/bootstrap.min.css" />
+  <link rel="stylesheet" href="/path/to/rwd-table.css" />
+  <script src="/path/to/jquery.min.js"></script>
+  <script src="/path/to/bootstrap.bundle.min.js"></script>
+  <script src="/path/to/rwd-table.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="path/to/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="logi.jpg" class="rounded-circle" alt="Logo" width="54" height="56">
+        </a>
+        <div class="navbar-buttons ml-auto">
+          <div class="search-button-container">
+            <button class="btn btn-primary search-button smooth-animation" id="toggleSearchButton">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>
+            </button>
+          </div>
+          <div class="add-item-button-container">
+            <button id="addItemButton" type="button" class="btn btn-primary smooth-animation" onclick="toggleFormVisibility()" style="position: relative;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+    
+      </div>
+    </nav>
+
+    <!-- <form id="addItemForm">
+        <label for="item_name">Item Name:</label>
+        <input type="text" id="item_name" name="item_name" required><br><br>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+        
+        <label for="item_type">Item Type:</label>
+        <select id="item_type" name="item_type">
+            <option value="container">Container</option>
+            <option value="object">Object</option>
+        </select><br><br>
+        
+        <button type="submit">Add Item</button>
+    </form> -->
+    <form id="addItemForm" class="needs-validation" style="display: none;" novalidate>
+        <div class="mb-3 select-margin-left">
+          <label for="item_name" class="form-label">Item Name:</label>
+          <input type="text" class="form-control" id="item_name" maxlength="20" required>
+          <div class="invalid-feedback">Please enter an item name (up to 20 characters).</div>
+        </div>
+        <div class="mb-3 select-margin-left">
+          <label for="description" class="form-label">Description:</label>
+          <input type="text" class="form-control" id="description" maxlength="20" required>
+          <div class="invalid-feedback">Please enter a description (up to 20 characters).</div>
+        </div>
+        <div class="mb-3 select-margin-left">
+          <label for="item_type" class="form-label">Item Type:</label>
+          <select class="form-control" id="item_type" required>
+            <option value="" selected disabled>Select an item type</option>
+            <option value="object">Object</option>
+            <option value="container">Container</option>
+          </select>
+          <div class="invalid-feedback">Please select an item type.</div>
+        </div>
+        <div class="col-12">
+          <div class="row table-margin-top">
+            <div class="small-button-wrapper">
+              <button type="submit" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send-fill" viewBox="0 0 16 16">
+                  <path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083l6-15Zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471-.47 1.178Z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+     
+       <script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+  <script src="path/to/your/js/script.js"></script>
+    <!-- Add your table header here -->
+    <div class="table-responsive my-4">
+      <div class="search-wrapper">
+        <div class="input-group search-box" id="searchBox">
+          <input type="text" id="searchInput" class="form-control" placeholder="Search for item...">
+          <!-- You can add a submit button here if needed -->
+        </div>
+      </div>
+      <div class="row table-margin-top">
+        <div class="col-md-12">
+          <div class="table-margin">
+            <table id="item-table" class="table table-hover table-bordered">
+              <thead class="thead-dark">
+                <tr>
+                  <!-- Add your table header here -->
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Items will be dynamically added here -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  <style>
+    .select-margin-left select {
+      margin-left: 20px;
+    }
+  </style>
+  
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="index.js"></script>
+</body>
+</html>

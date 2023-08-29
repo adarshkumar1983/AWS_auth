@@ -1,0 +1,254 @@
+/**
+ * @Author: Your name
+ * @Date:   2023-08-28 15:56:27
+ * @Last Modified by:   Your name
+ * @Last Modified time: 2023-08-28 16:36:57
+ */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+label,
+button {
+    color: #8d8d8d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-left: 40px;
+}
+input {
+    color: #d7c4c4;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin-left: 20px;
+}
+.delete-btn {
+background-color: #000;
+    color: #b80f0f;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Darker background on mouse-over */
+.delete-btn:hover {
+background-color: #333;
+}
+.edit-btn {
+background-color: #17c671; /* Blue background */
+border: none; /* Remove borders */
+color: rgb(14, 201, 10); /* White text */
+padding: 12px 16px; /* Some padding */
+font-size: 20px; /* Set a font size */
+cursor: pointer; /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.edit-btn:hover {
+background-color: #13a457;
+}
+.form-control {
+width: 500px; /* Adjust the width as desired */
+}
+
+.table-row {
+margin-left: 20px; /* Adjust the margin-left value as needed */
+}
+#item-table {
+color: rgb(255, 255, 255); /* Set the desired text color */
+}
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 80px; /* You can adjust this value as needed */
+}
+
+/* Navbar background color */
+.navbar {
+    background-color: #455892;
+}
+
+/* Navbar text color */
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+
+/* Define the animation for the element */
+.smooth-animation:hover {
+transform: scale(1.1);
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+/* Define the transition property for smooth animation */
+.smooth-animation {
+transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Define the initial state of the text field */
+.text-field {
+height: 0;
+opacity: 0;
+}
+
+/* Define the state when the text field is open */
+.text-field.open {
+height: 50px; /* Adjust the height as needed */
+opacity: 1;
+}
+
+
+
+
+.table-margin {
+margin-left: 20px;
+margin-right: 20px;
+}
+.row{
+margin-left: 10px;
+margin-right: 20px;
+}
+.table-margin-top {
+margin-top: 20px;    
+}
+
+
+
+
+.search-button-container
+{
+margin-left: 10px;
+
+}
+
+
+
+
+
+.search-wrapper {
+display: flex;
+justify-content: flex-end;
+align-items: center;
+margin-top: 20px; 
+}
+
+.search-box {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease-out;
+flex: 1;
+margin-left: 20px;
+margin-right: 45px;
+}
+
+.search-box.active {
+max-height: 200px;
+}
+@media (max-width: 767px) {
+.search-button-container {
+margin-right: 10px;
+}
+}
+
+
+
+
+
+
+.logo {
+font-size: 18px;
+font-weight: bold;
+}
+
+
+
+
+
+
+
+.navbar-buttons {
+display: flex;
+align-items: center;
+}
+
+
+
+.add-item-button-container {
+position: relative;
+}
+
+@media (max-width: 991px) {
+.navbar-buttons {
+justify-content: flex-end;
+}
+
+.search-button-container {
+order: 2;
+}
+
+.add-item-button-container {
+order: 1;
+}
+}
+
+
+
+
+
+.send-button {
+
+margin-left: 0px;
+margin-right: 15px;
+}
+.small-button-wrapper {
+padding: 4px 8px; 
+font-size: 12px;
+}
+select#iName {
+margin-bottom: 10px;
+}
+
+
+#addItemButton {
+background-color: #1c8adb;
+transition: opacity 0.3s ease;
+}
+#addItemButton:hover {
+    background-color: #2579a9;
+}
+
+.thead-dark th {
+    background-color: #ff0000;
+}
+
+.table-row {
+    background-color: #000000;
+}
+.fixed-button {
+position: fixed;
+bottom: 20px; /* Adjust this value to set the desired distance from the bottom */
+right: 20px; /* Adjust this value to set the desired distance from the right */
+z-index: 9999; /* Adjust this value if necessary */
+}
+
+.hide-button {
+opacity: 0;
+pointer-events: none;
+}
+.table-row .bi-box {
+color: rgb(35, 0, 230);
+}
+
+.table-row .bi-basket-fill {
+color: rgb(217, 130, 0);
+}
